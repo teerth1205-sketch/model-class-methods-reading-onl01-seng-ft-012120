@@ -12,7 +12,9 @@ class Post < ActiveRecord::Base
   where("created_at >=?", Time.zone.today.beginning_of_day)
   end
   
-  
+  def self.old_news
+  where("created_at <?", Time.zone.today.beginning_of_day)
+  end
   #put new code here
 
   private
