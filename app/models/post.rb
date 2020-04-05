@@ -4,6 +4,9 @@ class Post < ActiveRecord::Base
   before_validation :make_title_case 
   belongs_to :author
 
+  def self.by_author(author_id)
+  where(author: author_id)
+  end
   #put new code here
 
   private
