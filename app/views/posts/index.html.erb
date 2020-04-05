@@ -4,7 +4,7 @@
 
   <h3>Filter posts:</h3>
   <%= form_tag("/posts", method: "get") do %>
-    <%= select_tag "author", options_from_collection_for_select(@author.all, "id", "name"), include_blank: true %>
+    <%= select_tag "author", options_from_collection_for_select(@authors.all, "id", "name"), include_blank: true %>
   
   
 
